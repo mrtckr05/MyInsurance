@@ -1,0 +1,4 @@
+PyQt5>=5.15.11
+scikit-learn>=1.6.1
+pandas>=2.2.3
+numpy>=2.2.2
