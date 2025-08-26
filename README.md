@@ -1,7 +1,7 @@
 # Sigorta Maliyeti Tahmin Uygulaması
 # Insurance Cost Prediction Application
 
-## TUR 🇹🇷 | ENG 🇺🇸
+## TUR 🇹🇷 | ENG 🇬🇧
 
 Kaggle üzerindeki insurance.csv veri seti ile Random Forest kullanarak sigorta maliyeti tahmini yapan bir masaüstü uygulaması.
 A desktop application that predicts insurance costs using Random Forest with the insurance.csv dataset from Kaggle.
