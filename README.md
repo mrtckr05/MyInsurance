@@ -37,12 +37,12 @@ A desktop application that predicts insurance costs using Random Forest with the
 
 ```
 insurance_prediction_app/
-├── app.py                 # Ana uygulama | Main application
+├── app.py                # Ana uygulama | Main application
 ├── model.py              # Model eğitimi ve değerlendirme | Model training and evaluation
-├── insurance.py          # Tahmin işlemleri | Prediction operations
+├── insurance_gui.py      # Arayüz dosyası | Interface
 ├── save_model.py         # Model kaydetme | Model saving
 ├── insurance.csv         # Veri seti | Dataset
-└── models/              # Kaydedilmiş model dosyaları | Saved model files
+└── models/               # Kaydedilmiş model dosyaları | Saved model files
     ├── insurance_model.pkl
     ├── feature_encoder.pkl
     ├── feature_scaler.pkl

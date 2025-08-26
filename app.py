@@ -5,7 +5,7 @@ from model import predicted_prices
 import sys
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QApplication, QWidget
-from insurance import Ui_MyInsurance
+from insurance_gui import Ui_MyInsurance
 import numpy as np
 
 def load_model():
