@@ -9,10 +9,9 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtCore import pyqtSignal, QObject
+
 
 class Ui_MyInsurance(object):
-    finished = pyqtSignal(float)
     def __init__(self, age, bmi, sex, children, smoker, region, price):
         self.age = None
         self.bmi = None
@@ -61,34 +60,34 @@ class Ui_MyInsurance(object):
             return self.region
         elif regionButton.text() == 'Southwest':
             self.region = [0, 0, 1]
-            return self.region    
-
+            return self.region
+        
     def setupUi(self, MyInsurance):
         MyInsurance.setObjectName("MyInsurance")
-        MyInsurance.resize(473, 600)
+        MyInsurance.resize(450, 600)
         self.centralwidget = QtWidgets.QWidget(MyInsurance)
         self.centralwidget.setObjectName("centralwidget")
         self.MaleButton = QtWidgets.QRadioButton(self.centralwidget)
-        self.MaleButton.setGeometry(QtCore.QRect(260, 210, 51, 17))
+        self.MaleButton.setGeometry(QtCore.QRect(245, 210, 51, 17))
         self.MaleButton.setObjectName("MaleButton")
         self.genderbuttonsgroup = QtWidgets.QButtonGroup(MyInsurance)
         self.genderbuttonsgroup.setObjectName("genderbuttonsgroup")
         self.genderbuttonsgroup.addButton(self.MaleButton)
         self.FemaleButton = QtWidgets.QRadioButton(self.centralwidget)
-        self.FemaleButton.setGeometry(QtCore.QRect(110, 210, 61, 17))
+        self.FemaleButton.setGeometry(QtCore.QRect(115, 210, 61, 17))
         self.FemaleButton.setObjectName("FemaleButton")
         self.genderbuttonsgroup.addButton(self.FemaleButton)
         self.NumOfChildren = QtWidgets.QSpinBox(self.centralwidget)
         self.NumOfChildren.setGeometry(QtCore.QRect(180, 270, 71, 22))
         self.NumOfChildren.setObjectName("NumOfChildren")
         self.regionNth = QtWidgets.QRadioButton(self.centralwidget)
-        self.regionNth.setGeometry(QtCore.QRect(250, 390, 82, 17))
+        self.regionNth.setGeometry(QtCore.QRect(235, 390, 82, 17))
         self.regionNth.setObjectName("regionNth")
         self.regionButtonsGroup = QtWidgets.QButtonGroup(MyInsurance)
         self.regionButtonsGroup.setObjectName("regionButtonsGroup")
         self.regionButtonsGroup.addButton(self.regionNth)
         self.regionSth = QtWidgets.QRadioButton(self.centralwidget)
-        self.regionSth.setGeometry(QtCore.QRect(250, 420, 82, 17))
+        self.regionSth.setGeometry(QtCore.QRect(235, 420, 82, 17))
         self.regionSth.setObjectName("regionSth")
         self.regionButtonsGroup.addButton(self.regionSth)
         self.bmitext = QtWidgets.QLabel(self.centralwidget)
@@ -99,16 +98,16 @@ class Ui_MyInsurance(object):
         self.label.setWordWrap(False)
         self.label.setObjectName("label")
         self.display_price = QtWidgets.QTextBrowser(self.centralwidget)
-        self.display_price.setGeometry(QtCore.QRect(100, 520, 221, 31))
+        self.display_price.setGeometry(QtCore.QRect(105, 520, 221, 31))
         self.display_price.setObjectName("display_price")
         self.Price_label = QtWidgets.QLabel(self.centralwidget)
-        self.Price_label.setGeometry(QtCore.QRect(190, 500, 61, 20))
+        self.Price_label.setGeometry(QtCore.QRect(197, 500, 61, 20))
         self.Price_label.setObjectName("Price_label")
         self.user_children = QtWidgets.QLabel(self.centralwidget)
         self.user_children.setGeometry(QtCore.QRect(190, 240, 47, 21))
         self.user_children.setObjectName("user_children")
         self.user_gender = QtWidgets.QLabel(self.centralwidget)
-        self.user_gender.setGeometry(QtCore.QRect(180, 190, 61, 16))
+        self.user_gender.setGeometry(QtCore.QRect(190, 190, 61, 16))
         self.user_gender.setObjectName("user_gender")
         self.user_Smoker = QtWidgets.QLabel(self.centralwidget)
         self.user_Smoker.setGeometry(QtCore.QRect(190, 310, 47, 13))
@@ -117,7 +116,7 @@ class Ui_MyInsurance(object):
         self.isSmoker.setGeometry(QtCore.QRect(190, 330, 41, 17))
         self.isSmoker.setObjectName("isSmoker")
         self.user_region = QtWidgets.QLabel(self.centralwidget)
-        self.user_region.setGeometry(QtCore.QRect(180, 340, 71, 61))
+        self.user_region.setGeometry(QtCore.QRect(190, 340, 71, 61))
         self.user_region.setObjectName("user_region")
         self.sender = QtWidgets.QPushButton(self.centralwidget)
         self.sender.setGeometry(QtCore.QRect(170, 470, 81, 23))
@@ -167,14 +166,15 @@ class Ui_MyInsurance(object):
         self.bmi_text.setText("")
         self.bmi_text.setObjectName("bmi_text")
         self.textBrowser = QtWidgets.QTextBrowser(self.centralwidget)
-        self.textBrowser.setGeometry(QtCore.QRect(140, 0, 191, 21))
+        self.textBrowser.setGeometry(QtCore.QRect(131, 0, 191, 21))
+        self.textBrowser.setStyleSheet("border: none;")
         self.textBrowser.setObjectName("textBrowser")
         self.regionNTHW = QtWidgets.QRadioButton(self.centralwidget)
-        self.regionNTHW.setGeometry(QtCore.QRect(100, 390, 82, 17))
+        self.regionNTHW.setGeometry(QtCore.QRect(110, 390, 82, 17))
         self.regionNTHW.setObjectName("regionNTHW")
         self.regionButtonsGroup.addButton(self.regionNTHW)
         self.regionSTHW = QtWidgets.QRadioButton(self.centralwidget)
-        self.regionSTHW.setGeometry(QtCore.QRect(100, 420, 82, 17))
+        self.regionSTHW.setGeometry(QtCore.QRect(110, 420, 82, 17))
         self.regionSTHW.setObjectName("regionSTHW")
         self.regionButtonsGroup.addButton(self.regionSTHW)
         MyInsurance.setCentralWidget(self.centralwidget)
@@ -193,6 +193,7 @@ class Ui_MyInsurance(object):
         self.regionSTHW.toggled.connect(lambda checked: self.get_region(regionButton=self.regionSTHW))
         self.regionNth.toggled.connect(lambda checked: self.get_region(regionButton=self.regionNth))
         self.regionSth.toggled.connect(lambda checked: self.get_region(regionButton=self.regionSth))
+        
         self.retranslateUi(MyInsurance)
         QtCore.QMetaObject.connectSlotsByName(MyInsurance)
 
@@ -225,7 +226,6 @@ class Ui_MyInsurance(object):
         self.regionNTHW.setText(_translate("MyInsurance", "Northwest"))
         self.regionSTHW.setText(_translate("MyInsurance", "Southwest"))
 
-    
 
 if __name__ == "__main__":
     import sys
